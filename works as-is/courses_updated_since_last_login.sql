@@ -20,7 +20,7 @@ SELECT COURSE_NAME
                                     WHERE USER_PK1 = (SELECT PK1 
                                                         FROM bb_bb60.USERS
                                                        WHERE USER_ID = 'user_id'))
-             GROUP BY COURSE_PK1)
+             GROUP BY COURSE_PK1);
 
 
 /* searches the calendar table for any events where a date modified is greater 
@@ -40,7 +40,7 @@ SELECT COURSE_NAME
                                        WHERE ROLE='S'  
                                          AND USERS_PK1 = (SELECT PK1 
                                                             FROM BB_BB60.USERS 
-                                                           WHERE USER_ID ='user_id')))		
+                                                           WHERE USER_ID ='user_id')));
                                                            
 
 /* this looks at the course_contents table and searches to see if any new content
@@ -64,4 +64,4 @@ SELECT COURSE_NAME
                                       FROM BB_BB60.ACTIVITY_ACCUMULATOR
                                      WHERE USER_PK1 = (SELECT PK1
                                                          FROM BB_BB60.USERS
-                                                        WHERE USER_ID='user_id')))
+                                                        WHERE USER_ID='user_id')));

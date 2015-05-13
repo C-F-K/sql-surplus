@@ -14,4 +14,4 @@ SELECT COUNT(*)
 	        WHERE ROLE='P' 
                   AND USERS_PK1 = (SELECT PK1 
 				     FROM BB_BB60.USERS 
-				    WHERE USER_ID ='dbrown'))
+				    WHERE USER_ID ='dbrown'));

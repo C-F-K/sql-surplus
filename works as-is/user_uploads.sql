@@ -10,7 +10,7 @@ SELECT FILE_NAME, LINK_NAME
 					     FROM BB_BB60.COURSE_USERS
 				            WHERE USERS_PK1 = (SELECT PK1
 								 FROM BB_BB60.USERS
-							        WHERE USER_ID = 'USER_ID')))
+							        WHERE USER_ID = 'USER_ID')));
 
 							        
 /* You can cross check these files to ensure they were added via digital drop box */

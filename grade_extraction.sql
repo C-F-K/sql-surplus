@@ -8,7 +8,7 @@ SELECT COURSE_NAME, COURSE_ID
 	        WHERE ROLE='S'
 	          AND USERS_PK1 = (SELECT PK1 
   				     FROM BB_BB60.USERS
-				    WHERE USER_ID = 'USER_ID'))
+				    WHERE USER_ID = 'USER_ID'));
 
 
 /* Need to take the COURSE_ID string from the prvious query */
@@ -20,7 +20,7 @@ SELECT PK1, TITLE, QTI_ASI_DATA_PK1
  WHERE CRSMAIN_PK1 = (SELECT PK1
  		        FROM BB_BB60.COURSE_MAIN
 		       WHERE COURSE_ID = 'COURSE_ID'
-		         AND TITLE NOT IN ('Total', 'Weighted Total'))
+		         AND TITLE NOT IN ('Total', 'Weighted Total'));
 
 
 /* From the above QTI_ASI_DATA_PK1 you can obtain the username and grade - version 1 without essays etc*/
@@ -36,7 +36,7 @@ SELECT TOT.BATCH_UID, NUM.GRADE
 							     WHERE GR.PK1 = AT.GRADEBOOK_GRADE_PK1) CO
 			    WHERE US.PK1 = CO.COURSE_USERS_PK1
 			      AND US.ROLE != 'P') NUM
- WHERE TOT.PK1 = NUM.USERS_PK1
+ WHERE TOT.PK1 = NUM.USERS_PK1;
 
  
 /* From the GRADEBOOK_MAIN_PK1 you can select user_id and grade - version 2 include essays etc */
@@ -52,4 +52,4 @@ SELECT TOT.BATCH_UID, NUM.GRADE
 							     WHERE ATT.GRADEBOOK_GRADE_PK1 = GRD.PK1) CO
 			    WHERE US.PK1 = CO.COURSE_USERS_PK1
 			      AND US.ROLE != 'P') NUM
- WHERE TOT.PK1 = NUM.USERS_PK1
+ WHERE TOT.PK1 = NUM.USERS_PK1;

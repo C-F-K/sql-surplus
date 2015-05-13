@@ -8,7 +8,7 @@ SELECT COURSE_NAME, COURSE_ID, ROLE
   	 		     WHERE USER_ID = 'USER_ID')) A,
        (SELECT COURSE_NAME, COURSE_ID, PK1
           FROM BB_BB60.COURSE_MAIN) B
- WHERE A.CRSMAIN_PK1 = B.PK1
+ WHERE A.CRSMAIN_PK1 = B.PK1;
  
 
 /* Changes the user's role on all courses from COURE_BUILDER to instructor */
@@ -24,5 +24,6 @@ UPDATE BB_BB60.COURSE_USERS
    SET ROLE = 'P'
  WHERE USERS_PK1 = (SELECT PK1
  		      FROM BB_BB60.USERS
- 		     WHERE USER_ID = 'USER_ID')
-   AND ROLE='B'
+ 		     WHERE USER_ID = 'US
+         ER_ID')
+   AND ROLE='B';

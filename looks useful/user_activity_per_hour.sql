@@ -1,7 +1,7 @@
 DECLARE @dayint int, @day1 datetime, @day2 datetime, @wkdy varchar
-
+ 
 SET @dayint = 7
-
+ 
 WHILE @dayint > 0
 BEGIN
 SET @day1 = CONVERT(varchar, DATEADD(day, -@dayint, CURRENT_TIMESTAMP), 101)

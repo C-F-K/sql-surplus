@@ -11,7 +11,7 @@ SELECT * FROM bb_bb60.attempt
                                 WHERE course_users_pk1 IN (SELECT pk1 FROM bb_bb60.course_users
      						            WHERE crsmain_pk1 = 'crsmain_pk1'
                                                               AND users_pk1 = (SELECT pk1 FROM bb_bb60.users
-                                                                                WHERE user_id = 'user_id')))
+                                                                                WHERE user_id = 'user_id')));
                                                                                 
                                                                                 
 /* Once you have found your attempt_pk1 you can check you are looking at the right assessment by running 
@@ -21,7 +21,7 @@ SELECT *
   FROM bb_bb60.gradebook_main
  WHERE pk1 = (SELECT gradebook_main_pk1 
                 FROM bb_bb60.gradebook_grade
-               WHERE pk1 = 'gradebook_grade_pk1')
+               WHERE pk1 = 'gradebook_grade_pk1');
                
 
 /* You now need to update the attempt entry to remove the padlock 

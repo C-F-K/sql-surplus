@@ -14,7 +14,7 @@ order by activity_clicks desc;
 
 ---List users who accessed the system sorted by the amount of activity they performed:
 
-select user_id, sum(duration_time) as seconds, sum(click) as activity_clicks
+select user_id, sum(duration_time) as seconds, sum(click) as activity_clicks;
 
 --List active users per role (how many students, faculty etc.) 
 

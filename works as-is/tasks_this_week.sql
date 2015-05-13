@@ -6,6 +6,6 @@ SELECT COUNT(*)
         WHERE USERS_PK1 IN
              (SELECT PK1 
                 FROM BB_BB60.USERS 
-               WHERE USER_ID ='dbrown')) 
+               WHERE USER_ID ='your user name here')) 
    AND TO_DATE(DUEDATE,'DD/MM/YYYY') >= TO_DATE(SYSDATE,'DD/MM/YYYY') 
-   AND TO_DATE(DUEDATE,'DD/MM/YYYY') <= TO_DATE((SYSDATE+7),'DD/MM/YYYY')
+   AND TO_DATE(DUEDATE,'DD/MM/YYYY') <= TO_DATE((SYSDATE+7),'DD/MM/YYYY');
